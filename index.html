@@ -109,7 +109,6 @@ header.mast {
     <img class="avatar" id="avatar" alt="" hidden>
     <div>
       <h1 id="name"><span class="tag">#photography</span></h1>
-      <p id="npub"></p>
     </div>
   </div>
   <div class="status" id="status"><span class="dot"></span>Connecting to relays…</div>
@@ -171,7 +170,6 @@ header.mast {
   const sockets = new Map();    // url -> WebSocket (open)
   let subCounter = 0;
 
-  $("npub").textContent = NPUB.slice(0, 16) + "…" + NPUB.slice(-8);
 
   function setStatus(html, live){ $("status").innerHTML = `<span class="dot${live?" live":""}"></span>` + html; }
 
